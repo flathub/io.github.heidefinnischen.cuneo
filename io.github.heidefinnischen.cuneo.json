@@ -1,7 +1,7 @@
 {
     "id" : "io.github.heidefinnischen.cuneo",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "48",
+    "runtime-version" : "50",
     "sdk" : "org.gnome.Sdk",
     "command" : "cuneo",
     "finish-args" : [
@@ -10,20 +10,9 @@
         "--device=dri",
         "--socket=wayland"
     ],
-    "cleanup" : [
-        "/include",
-        "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
-    ],
     "modules" : [
-    	{
-	    "name" : "cuneo",
+        {
+            "name" : "cuneo",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
@@ -34,6 +23,5 @@
                 }
             ]
         }
-
     ]
 }
